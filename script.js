@@ -30,7 +30,7 @@ function isValid (settings) {
 const url = 'https://www.random.org/strings/';
 async function getPassword (settings) {
     const params = new URLSearchParams(settings).toString().replaceAll('true', 'on').replaceAll('false','off');
-    let response = (await fetch(url + '?' + params));
+    const response = await fetch(url + '?' + params);
     document.querySelector('.password').textContent = await response.text();
 }
 
