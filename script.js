@@ -11,11 +11,11 @@ function getSettings () {
 function isValid (settings) {
     if (settings.length < 6){
         document.querySelector('.length').value = 6
-        return 1;
+        settings.length = 6
     }
     if (settings.length > 2048){
         document.querySelector('.length').value = 2048
-        return 1;
+        settings.length = 2048
     }
     return 1;
 }
