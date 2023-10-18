@@ -1,43 +1,39 @@
 function getSettings () {
     return {
-        num: '1',
-        len: document.querySelector('.len').value,
-        digits: document.querySelector('.digits').checked,
-        upperalpha: document.querySelector('.upperCase').checked,
-        loweralpha: document.querySelector('.lowerCase').checked,
-        unique: 'on',
-        format: 'plain',
-        rnd: 'new'
+        length: document.querySelector('.length').value,
+        int: Number(document.querySelector('.int').checked),
+        upper: Number(document.querySelector('.upper').checked),
+        lower: Number(document.querySelector('.lower').checked),
+        special: Number(document.querySelector('.special').checked),
     }
 }
 
 function isValid (settings) {
-    if (settings.len < 1){
-        alert ('Число симоловом не может быть меньше 1.')
-        return 0;
+    if (settings.length < 6){
+        document.querySelector('.length').value = 6
+        return 1;
     }
-    if (settings.len > 20){
-        alert ('Число симоловом не может быть больше 20.')
-        return 0;
-    }
-    if (!settings.digits && !settings.upperalpha && !settings.loweralpha){
-        alert ('С выбранными настройками строка будет пустой, выберете хотя бы 1 настройку.')
-        return 0;
+    if (settings.length > 20){
+        document.querySelector('.length').value = 2048
+        return 1;
     }
     return 1;
 }
 
-const url = 'https://www.random.org/strings/';
+const url = 'https://www.psswrd.net/api/v1/password/';
 async function getPassword (settings) {
-    const params = new URLSearchParams(settings).toString().replaceAll('true', 'on').replaceAll('false','off');
-    const response = await fetch(url + '?' + params);
-    document.querySelector('.password').textContent = await response.text();
+    const params = new URLSearchParams(settings).toString();
+    return await fetch(url + '?' + params)
+        .then(res => res.json())
+        .then(data => data.password);
 }
 
-const button = document.querySelector('.gen-pass');
+const button = document.querySelector('.generate-password');
 button.onclick = () => {
     const settings = getSettings();
     if (isValid(settings)) {
-        getPassword(settings).then(); // Заглушка
+         getPassword(settings)
+            .then(res => res)
+            .then(res => document.querySelector('.password').textContent = res);
     }
 }

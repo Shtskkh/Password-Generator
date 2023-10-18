@@ -18,23 +18,30 @@
         <div class="main">
             <ul class="settings">
                 <li>
-                    <label for="len">Введите количество символов</label>
-                    <input type="number" id="len" class="len" min="1" max="20" value="4">
+                    <label for="length">Введите количество символов (6-2048) </label>
+                    <input type="number" id="length" class="length" min="6" max="2048" value="8">
                 </li>
                 <li>
-                    <input type="checkbox" id="digits" class="digits" checked>
-                    <label for="digits">Использовать цифры (0-9)</label>
+                    <input type="checkbox" id="int" class="int" checked>
+                    <label for="int">Использовать цифры (0-9)</label>
                 </li>
                 <li>
-                    <input type="checkbox" id="upperCase" class="upperCase" checked>
-                    <label for="upperCase">Использовать прописные символы (A-Z)</label>
+                    <input type="checkbox" id="upper" class="upper" checked>
+                    <label for="upper">Использовать прописные символы (A-Z)</label>
                 </li>
                 <li>
-                    <input type="checkbox" id="lowerCase" class="lowerCase" checked>
-                    <label for="lowerCase">Использовать строчные символы (a-z)</label>
+                    <input type="checkbox" id="lower" class="lower" checked>
+                    <label for="lower">Использовать строчные символы (a-z)</label>
                 </li>
                 <li>
-                    <button class="gen-pass">Сгенерировать пароль</button>
+                    <input type="checkbox" id="special" class="special" checked>
+                    <label for="special">Использовать специальные символы (!#/)</label>
+                </li>
+                <li>
+                    <div class="note">Обратите внимание, если все настройки настройки отключены, то они будут включены поумолчанию.</div>
+                </li>
+                <li>
+                    <button class="generate-password">Сгенерировать пароль</button>
                 </li>
                 <li>
                     <div class="password"></div>
