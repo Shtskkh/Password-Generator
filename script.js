@@ -13,7 +13,7 @@ function isValid (settings) {
         document.querySelector('.length').value = 6
         return 1;
     }
-    if (settings.length > 20){
+    if (settings.length > 2048){
         document.querySelector('.length').value = 2048
         return 1;
     }
