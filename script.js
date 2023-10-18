@@ -33,7 +33,6 @@ button.onclick = () => {
     const settings = getSettings();
     if (isValid(settings)) {
          getPassword(settings)
-            .then(res => res)
-            .then(res => document.querySelector('.password').textContent = res);
+            .then(res => document.querySelector('.password').textContent = res)
     }
 }
