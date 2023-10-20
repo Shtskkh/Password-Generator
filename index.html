@@ -6,55 +6,49 @@
     <title>Генератор паролей</title>
 </head>
 <body>
-<header>
-    <div class="container">
+<div class="container">
+    <header>
         <div class="header">
             <h1 class="title">Генератор паролей</h1>
         </div>
-    </div>
-</header>
-<main>
-    <div class="container">
+    </header>
+    <main>
         <div class="main">
             <ul class="settings">
-                <li>
-                    <label for="length">Введите количество символов (6-2048) </label>
+                <li class="setting">
+                    <label for="length">Введите количество символов: </label>
                     <input type="number" id="length" class="length" min="6" max="2048" value="8">
                 </li>
-                <li>
+                <li class="setting">
                     <input type="checkbox" id="int" class="int" checked>
                     <label for="int">Использовать цифры (0-9)</label>
                 </li>
-                <li>
+                <li class="setting">
                     <input type="checkbox" id="upper" class="upper" checked>
                     <label for="upper">Использовать прописные символы (A-Z)</label>
                 </li>
-                <li>
+                <li class="setting">
                     <input type="checkbox" id="lower" class="lower" checked>
                     <label for="lower">Использовать строчные символы (a-z)</label>
                 </li>
-                <li>
+                <li class="setting">
                     <input type="checkbox" id="special" class="special" checked>
                     <label for="special">Использовать специальные символы (!#/)</label>
                 </li>
-                <li>
-                    <div class="note">Обратите внимание, если все настройки настройки отключены, то они будут включены поумолчанию.</div>
-                </li>
-                <li>
-                    <button class="generate-password">Сгенерировать пароль</button>
-                </li>
-                <li>
-                    <div class="password"></div>
+                <li class="setting">
+                    <div class="note">Обратите внимание, если все настройки настройки отключены, то они будут включены
+                        по умолчанию!
+                    </div>
                 </li>
             </ul>
+            <button class="generate-password">Сгенерировать пароль</button>
+            <div class="password"></div>
         </div>
-    </div>
-</main>
+    </main>
+</div>
 <footer>
-    <div class="container">
-        <div class="footer">
-            Coded by <a href="https://vk.com/shtskkh" target="_blank">Alexey Shatskikh</a>
-        </div>
+    <div class="footer">
+        Coded by <a href="https://vk.com/shtskkh" target="_blank">Alexey Shatskikh</a>
     </div>
 </footer>
 <script src="./script.js"></script>

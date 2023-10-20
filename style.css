@@ -9,16 +9,64 @@
 html, body {
     font-family: 'Nunito Sans', sans-serif;
     display: flex;
-    min-height: 100%;
+    height: 100%;
     flex-direction: column;
-    justify-content: center;
+    justify-content: safe center;
     align-items: center;
 }
 
 .container {
-    padding: 15px;
+    margin: 15px 15px;
+    max-width: 400px;
+    padding: 15px 15px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.title {
+    text-align: center;
 }
 
 .settings {
     list-style-type: none;
+    margin-bottom: 5px;
+}
+
+.setting {
+    padding: 3px;
+}
+
+.length {
+    width: 50px;
+    text-align: center;
+}
+
+.note {
+    color: darkgray;
+}
+
+.generate-password {
+    padding: 5px 15px;
+    min-height: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: transparent;
+    display: block;
+    margin: 0 auto;
+}
+
+.generate-password:hover {
+    cursor: pointer;
+}
+
+.password {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    min-height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow-wrap: anywhere;
+    margin-top: 15px;
 }
