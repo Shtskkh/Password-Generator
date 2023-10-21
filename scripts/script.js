@@ -41,6 +41,8 @@ generateButton.onclick = () => {
 const copyPassword = document.querySelector('.copy-password');
 copyPassword.onclick = () => {
     const password = document.querySelector('.password').textContent;
-    navigator.clipboard.writeText(password)
-        .then(() =>document.querySelector('.copy-alert').hidden = false);
+    if(password !== ''){
+        navigator.clipboard.writeText(password)
+            .then(() =>document.querySelector('.copy-alert').hidden = false);
+    }
 }
