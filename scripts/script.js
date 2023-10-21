@@ -28,11 +28,19 @@ async function getPassword (settings) {
         .then(data => data.password);
 }
 
-const button = document.querySelector('.generate-password');
-button.onclick = () => {
+const generateButton = document.querySelector('.generate-password');
+generateButton.onclick = () => {
     const settings = getSettings();
     if (isValid(settings)) {
          getPassword(settings)
             .then(res => document.querySelector('.password').textContent = res)
+             .then(() => document.querySelector('.copy-alert').hidden = true);
     }
+}
+
+const copyPassword = document.querySelector('.copy-password');
+copyPassword.onclick = () => {
+    const password = document.querySelector('.password').textContent;
+    navigator.clipboard.writeText(password)
+        .then(() =>document.querySelector('.copy-alert').hidden = false);
 }
