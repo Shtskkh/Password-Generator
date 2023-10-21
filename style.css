@@ -6,6 +6,16 @@
     box-sizing: border-box;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 html, body {
     height: 100%;
     display: flex;
@@ -14,14 +24,16 @@ html, body {
     align-items: safe center;
     font-family: 'Nunito Sans', sans-serif;
     font-size: clamp(18px, 4vw, 24px);
+    color: #D8DBE2;
+    background: #1B1B1E;
 }
 
 .container {
     max-width: 600px;
-    padding: 15px;
+    padding: 25px;
     margin: 15px;
-    border: 2px solid black;
-    border-radius: 15px
+    border-radius: 15px;
+    background: #373F51;
 }
 
 .title {
@@ -32,28 +44,33 @@ html, body {
 
 .settings li {
     list-style-type: none;
-    margin: 3px;
+    margin: 8px 0;
 }
 
 .length {
     width: 50px;
     text-align: center;
-    font-size: 0.75rem;
+    font-size: clamp(18px, 4vw, 24px);
+    background: transparent;
+    border: 1px solid #D8DBE2;
+    border-radius: 5px;
+    color: #D8DBE2;
 }
 
 .note {
-    color: darkgray;
+    color: #A9BCD0;
 }
 
 .generate-password {
     height: 50px;
-    border: 2px solid black;
+    border: 2px solid #D8DBE2;
     border-radius: 5px;
     padding: 5px 15px;
     background: transparent;
     display: block;
     margin: 0 auto 15px auto;
     font-size: 1rem;
+    color: #D8DBE2;
 }
 
 .generate-password:hover {
@@ -66,7 +83,16 @@ html, body {
     align-items: center;
     min-height: 50px;
     padding: 5px 15px;
-    border: 1px solid black;
+    border: 1px solid #D8DBE2;
     border-radius: 5px;
     overflow-wrap: anywhere;
+}
+
+.footer, .footer__link {
+    text-decoration: none;
+    color: #A9BCD0;
+}
+
+.footer__link:hover {
+    border-bottom: 1px solid #A9BCD0;
 }
