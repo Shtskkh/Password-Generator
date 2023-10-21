@@ -38,11 +38,11 @@ generateButton.onclick = () => {
     }
 }
 
-const copyPassword = document.querySelector('.copy-password');
-copyPassword.onclick = () => {
+const copyButton = document.querySelector('.copy-password');
+copyButton.onclick = () => {
     const password = document.querySelector('.password').textContent;
     if(password !== ''){
         navigator.clipboard.writeText(password)
-            .then(() =>document.querySelector('.copy-alert').hidden = false);
+            .then(() => document.querySelector('.copy-alert').hidden = false);
     }
 }
