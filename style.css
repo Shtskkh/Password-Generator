@@ -30,6 +30,7 @@ html, body {
 .settings {
     list-style-type: none;
     margin-bottom: 5px;
+    padding: 3px;
 }
 
 .setting {
