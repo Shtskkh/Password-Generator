@@ -84,7 +84,7 @@ html, body {
     color: #A9BCD0;
 }
 
-.generate-password:hover {
+.btn:hover {
     cursor: pointer;
 }
 
