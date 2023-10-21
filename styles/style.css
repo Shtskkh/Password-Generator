@@ -30,7 +30,7 @@ html, body {
 
 .container {
     max-width: 600px;
-    padding: 25px;
+    padding: clamp(15px, 4vw, 25px);
     margin: 15px;
     border-radius: 15px;
     background: #373F51;
@@ -39,16 +39,16 @@ html, body {
 .title {
     text-align: center;
     line-height: 2rem;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 .settings li {
     list-style-type: none;
-    margin: 8px 0;
+    margin: 15px 0;
 }
 
 .length {
-    width: 50px;
+    width: 70px;
     text-align: center;
     font-size: clamp(18px, 4vw, 24px);
     background: transparent;
@@ -64,11 +64,11 @@ html, body {
 .generate-password {
     height: 50px;
     border: 2px solid #D8DBE2;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 5px 15px;
     background: transparent;
     display: block;
-    margin: 0 auto 15px auto;
+    margin: 0 auto 20px auto;
     font-size: 1rem;
     color: #D8DBE2;
 }
@@ -83,12 +83,13 @@ html, body {
     align-items: center;
     min-height: 50px;
     padding: 5px 15px;
-    border: 1px solid #D8DBE2;
-    border-radius: 5px;
+    border: 2px solid #D8DBE2;
+    border-radius: 10px;
     overflow-wrap: anywhere;
 }
 
 .footer, .footer__link {
+    margin-bottom: 15px;
     text-decoration: none;
     color: #A9BCD0;
 }
