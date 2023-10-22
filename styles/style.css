@@ -26,7 +26,6 @@ html, body {
     font-size: clamp(18px, 4vw, 24px);
     color: #D8DBE2;
     background: #1B1B1E;
-    overflow: scroll;
 }
 
 .container {
